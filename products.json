@@ -1,0 +1,154 @@
+[
+    {
+    "id": 1,
+    "rate": 4.8,
+    "img": "/jsons/salad-1.png",
+    "title": "Italian Cheese Salad",
+    "category": "Veges",
+    "price": 9.99
+    },
+    {
+    "id": 2,
+    "rate": 4.7,
+    "img": "/jsons/salad-2.png",
+    "title": "Sicilian Special Mixed",
+    "category": "Veges",
+    "price": 12.99
+    },
+    {
+    "id": 3,
+    "rate": 4.8,
+    "img": "/jsons/salad-3.png",
+    "title": "Leafly With Tropic Fruits",
+    "category": "Veges",
+    "price": 16.99
+    },
+    {
+    "id": 5,
+    "rate": 4,
+    "img": "/jsons/salad-5.png",
+    "title": "World Kitchen Salad",
+    "category": "Veges",
+    "price": 7.99
+    },
+    {
+    "id": 6,
+    "rate": 4.6,
+    "img": "/jsons/salad-6.png",
+    "title": "Power of Greenery(Tomato)",
+    "category": "Veges",
+    "price": 17.99
+    },
+    {
+    "id": 7,
+    "rate": 5,
+    "img": "/jsons/salad-7.png",
+    "title": "Small Olive Grain(Shrimp)",
+    "category": "Veges",
+    "price": 40.99
+    },
+    {
+    "id": 8,
+    "rate": 5,
+    "img": "/jsons/salad-8.png",
+    "title": "Greens with Breads(Diet) ",
+    "category": "Veges",
+    "price": 32.99
+    },
+    {
+    "id": 9,
+    "rate": 5,
+    "img": "/jsons/pizza-1.png",
+    "title": "Mozerella Chicken Pizza ",
+    "category": "Snacks",
+    "price": 4.99
+    },
+    {
+    "id": 10,
+    "rate": 5,
+    "img": "/jsons/pizza-2.png",
+    "title": "Turkish Tomato(Chedar) ",
+    "category": "Snacks",
+    "price": 6.99
+    },
+    {
+    "id": 11,
+    "rate": 2.7,
+    "img": "/jsons/pizza-3.png",
+    "title": "Mashroom Empire (Meat) ",
+    "category": "Snacks",
+    "price": 9.99
+    },
+    {
+    "id": 12,
+    "rate": 4.4,
+    "img": "/jsons/pizza-4.png",
+    "title": "Vintage Light Pizza (Peppers) ",
+    "category": "Snacks",
+    "price": 2.99
+    },
+    {
+    "id": 13,
+    "rate": 5,
+    "img": "/jsons/pizza-5.png",
+    "title": "Lots of cheddar cheese",
+    "category": "Snacks",
+    "price": 8.99
+    },
+    {
+    "id": 14,
+    "rate": 4.9,
+    "img": "/jsons/pizza-6.png",
+    "title": "Tomato Mashroom (Olive Grains)",
+    "category": "Snacks",
+    "price": 12.99
+    },
+    {
+    "id": 15,
+    "rate": 4.2,
+    "img": "/jsons/pizza-7.png",
+    "title": "Chicago Style Pizza",
+    "category": "Snacks",
+    "price": 3.99
+    },
+    {
+    "id": 16,
+    "rate": 2.2,
+    "img": "/jsons/pizza-8.png",
+    "title": "Small Pizza (For Kids)",
+    "category": "Snacks",
+    "price": 0.99
+    },
+    {
+    "id": 17,
+    "rate": 5,
+    "img": "/jsons/drink-1.png",
+    "title": "Turkish Hanmade Ayran(300ml)",
+    "category": "Drinks",
+    "price": 1.99
+    },
+    {
+    "id": 18,
+    "rate": 5,
+    "img": "/jsons/drink-2.png",
+    "title": "Zero Cold Cola(300ml)",
+    "category": "Drinks",
+    "price": 3.99
+    },
+    {
+    "id": 19,
+    "rate": 5,
+    "img": "/jsons/drink-3.png",
+    "title": "Natural Water(0.5L)",
+    "category": "Drinks",
+    "price": 0.59
+    },
+    {
+    "id": 20,
+    "rate": 5,
+    "img": "/jsons/drink-4.png",
+    "title": "Mixed Fruit Juice(0.5L)",
+    "category": "Drinks",
+    "price": 6.59
+    }
+    ]
