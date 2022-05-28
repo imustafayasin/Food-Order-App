@@ -1,0 +1,335 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@200;300;400;500;600;700&display=swap");
+ * {
+	 margin: 0;
+	 padding: 0;
+	 text-decoration: none;
+	 border: none;
+	 outline: none;
+	 box-sizing: border-box;
+	 font-family: "Inter", sans-serif;
+}
+ html, body {
+	 width: 100%;
+	 height: 100%;
+}
+ body {
+	 background-color: #fdfdfd;
+	 font-size: 16px;
+	 display: grid;
+	 place-items: center;
+}
+ #app {
+	 margin: auto;
+	 width: 400px;
+	 border: 5px solid #120f10;
+	 height: 90%;
+	 overflow: hidden;
+	 padding-top: 40px;
+	 border-radius: 40px;
+	 position: relative;
+}
+ #app .head {
+	 display: flex;
+	 padding: 0 20px;
+	 justify-content: space-between;
+}
+ #app .head:not(.scroll) {
+	 margin-bottom: 3.4em;
+}
+ #app .head svg {
+	 width: 24px;
+	 cursor: pointer;
+	 height: 24px;
+}
+ #app .content {
+	 padding: 0 20px;
+	 overflow-y: auto;
+	 height: 100%;
+}
+ #app .content.hide {
+	 opacity: 0;
+	 transform: scale(0);
+	 visibility: hidden;
+	 transition: 250ms all linear;
+}
+ #app .content::-webkit-scrollbar {
+	 width: 4px;
+}
+ #app .content .page-title {
+	 font-weight: 700;
+	 font-size: 2.2em;
+	 color: #110e0e;
+	 margin-bottom: 1.1em;
+}
+ #app .content .collections {
+	 margin-bottom: 4em;
+	 display: flex;
+}
+ #app .content .collections .collection {
+	 width: calc(100% / 4);
+	 text-align: center;
+	 border: 1px solid #e8e8e8;
+	 padding: 20px 10px;
+	 border-radius: 120px;
+	 cursor: pointer;
+}
+ #app .content .collections .collection:hover, #app .content .collections .collection.active {
+	 transition: 200ms all linear;
+	 background-color: #ffc301;
+}
+ #app .content .collections .collection.active .image, #app .content .collections .collection:hover .image {
+	 background-color: #fff;
+}
+ #app .content .collections .collection:not(:last-child) {
+	 margin-right: 20px;
+}
+ #app .content .collections .collection .image {
+	 border: 1px solid #f4f4f4;
+	 border-radius: 50%;
+	 width: 55px;
+	 height: 55px;
+	 margin: auto;
+	 display: grid;
+	 margin-bottom: 1em;
+	 place-items: center;
+}
+ #app .content .collections .collection .image svg {
+	 width: 30px;
+	 height: 30px;
+}
+ #app .content .collections .collection .title {
+	 font-size: 0.8em;
+	 font-weight: 700;
+}
+ #app .content .products {
+	 gap: 2em;
+	 display: flex;
+	 flex-wrap: wrap;
+	 user-select: none;
+	 justify-content: space-evenly;
+}
+ #app .content .products .product {
+	 text-align: center;
+	 width: calc(50% - 2em);
+	 cursor: pointer;
+	 margin-bottom: 1.5em;
+}
+ #app .content .products .product .rating {
+	 display: flex;
+	 align-items: center;
+	 font-weight: bold;
+	 color: #a8a8a8;
+	 font-size: 0.8em;
+	 justify-content: center;
+}
+ #app .content .products .product .rating .star {
+	 width: 16px;
+	 height: 16px;
+	 margin-left: 5px;
+}
+ #app .content .products .product .image {
+	 max-width: 150px;
+	 max-height: 150px;
+	 padding: 10px;
+	 position: relative;
+	 height: 100%;
+	 margin: auto;
+	 margin-bottom: 2.4em;
+}
+ #app .content .products .product .image img {
+	 object-fit: contain;
+	 animation: scale 0.2s linear;
+	 filter: drop-shadow(0px 20px 6px rgba(0, 0, 0, 0.13));
+}
+ #app .content .products .product .title {
+	 color: #848484;
+	 font-size: 1.1em;
+	 font-weight: 600;
+	 line-height: 1.5em;
+	 margin-bottom: 0.7em;
+}
+ #app .content .products .product button.add-basket {
+	 width: 45px;
+	 cursor: pointer;
+	 height: 45px;
+	 background-color: #fff;
+	 border-radius: 50%;
+	 padding: 15px;
+	 bottom: 0px;
+	 left: 50%;
+	 transform: translateX(-50%);
+	 position: absolute;
+}
+ #app .content .products .product .price {
+	 color: #110e0e;
+	 font-weight: 900;
+	 font-size: 1.5em;
+}
+ #app .content .products .product .price sup {
+	 font-size: 0.6em;
+	 margin-right: 5px;
+}
+ #app .content .products .loader {
+	 text-align: center;
+	 width: 100%;
+}
+ #app .content .products .loader span {
+	 width: 25px;
+	 height: 25px;
+	 display: inline-block;
+	 border-radius: 50%;
+	 border: 5px solid transparent;
+	 border-right-color: #ffc301;
+	 border-top-color: #ffc301;
+	 animation: spin 0.5s infinite;
+}
+ #app .product-page {
+	 padding: 0 40px;
+	 transform: scale(0);
+	 opacity: 0;
+	 text-align: center;
+}
+ #app .product-page.show {
+	 transform: scale(1);
+	 opacity: 1;
+	 transition: 250ms all linear;
+}
+ #app .product-page .rate {
+	 display: flex;
+	 align-items: center;
+	 color: #adadad;
+	 justify-content: center;
+	 font-weight: bold;
+	 margin-bottom: 1.3em;
+}
+ #app .product-page .rate svg {
+	 width: 15px;
+	 height: 15px;
+	 margin-left: 5px;
+}
+ #app .product-page .title {
+	 font-size: 2em;
+	 margin-bottom: 1em;
+	 color: #18181c;
+	 font-weight: 700;
+}
+ #app .product-page img {
+	 width: 60%;
+	 margin: auto;
+	 margin-bottom: 2em;
+}
+ #app .product-page .qty {
+	 display: flex;
+	 align-items: center;
+	 justify-content: center;
+	 margin-bottom: 2em;
+}
+ #app .product-page .qty button {
+	 width: 50px;
+	 height: 50px;
+	 padding: 15px;
+	 background: #fff;
+	 border: 1px solid #e2e2e2;
+	 border-radius: 50%;
+	 cursor: pointer;
+}
+ #app .product-page .qty input#qty-input {
+	 text-align: center;
+	 font-size: 2em;
+	 width: 1em;
+	 margin: 0 20px;
+	 font-weight: 600;
+	 background: #fff;
+	 color: #000;
+	 opacity: 1;
+}
+ #app .product-page .price {
+	 color: #110e0e;
+	 font-weight: 900;
+	 font-size: 2em;
+	 margin-bottom: 1em;
+}
+ #app .product-page .price sup {
+	 font-size: 0.6em;
+	 margin-right: 5px;
+}
+ #app .product-page .desc {
+	 color: #999;
+}
+ #app .basket {
+	 position: absolute;
+	 bottom: 0px;
+	 background-color: #110e0f;
+	 width: 100%;
+	 color: #fff;
+	 height: 70px;
+	 display: flex;
+	 align-items: center;
+	 justify-content: space-between;
+	 padding: 0 15px;
+	 transform: translateY(100px);
+}
+ #app .basket.active {
+	 transition: 250ms all linear;
+	 transform: translateY(0);
+}
+ #app .basket .basketItems {
+	 display: flex;
+	 align-items: center;
+}
+ #app .basket .basketItems .item:not(:last-child) {
+	 margin-right: 10px;
+}
+ #app .basket .basketItems .item .qty {
+	 width: 30px;
+	 height: 30px;
+	 display: inline-grid;
+	 place-items: center;
+	 background: #fdc306;
+	 border-radius: 50%;
+	 color: #110e0f;
+	 position: relative;
+	 font-weight: 900;
+	 right: 12px;
+	 border: 4px solid #110e0f;
+}
+ #app .basket .basketItems img {
+	 width: 40px;
+	 height: auto;
+}
+ @keyframes spin {
+	 100% {
+		 transform: rotate(360deg);
+	}
+}
+ @keyframes scale {
+	 0% {
+		 transform: scale(0);
+		 opacity: 0;
+	}
+	 50% {
+		 opacity: 0;
+		 transform: scale(0.7);
+	}
+	 100% {
+		 opacity: 1;
+		 transform: scale(1);
+	}
+}
+ img {
+	 width: 100%;
+	 height: 100%;
+}
+ .text-gray {
+	 color: #a8a8a8;
+}
+ @media (max-width: 1440px) {
+	 #app {
+		 zoom: 0.8;
+	}
+}
+ input::-webkit-outer-spin-button, input::-webkit-inner-spin-button {
+	 -webkit-appearance: none;
+	 margin: 0;
+}
+ 
